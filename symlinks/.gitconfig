@@ -1,0 +1,27 @@
+[user]
+  name = Christopher Thornton
+  email = rmdirbin@gmail.com
+[rerere]
+  enabled = 1
+[color]
+  ui = auto
+[branch]
+  autosetupmerge = always
+  autosetuprebase = always
+[push]
+  default = simple
+[alias]
+  current-branch = rev-parse --symbolic-full-name --abbrev-ref HEAD
+  shove = "!f() { H=$(git current-branch) && git push -u origin $H; }; f"
+  ancestor = !bash -c 'diff --old-line-format= --new-line-format= <(git rev-list --first-parent \"${1:-master}\") <(git rev-list --first-parent \"${2:-HEAD}\") | head -1' -
+  lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+
+  st = status
+  fp = push --force
+  ci = commit
+  co = checkout
+  purge = reset HEAD --hard
+  pp = pull --prune
+  rb = rebase
+  cp = cherry-pick
+

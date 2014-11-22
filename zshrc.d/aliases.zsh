@@ -1,0 +1,6 @@
+alias la="ls -lah"
+alias q="exit"
+alias c="clear"
+alias gs="git status"
+alias bx="bundle exec"
+alias edit="bbedit"
