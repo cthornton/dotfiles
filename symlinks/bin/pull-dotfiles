@@ -3,3 +3,4 @@
 echo "Updating Dotfiles..."
 cd ~/dotfiles
 git pull
+sync-dotfiles

@@ -16,6 +16,14 @@ cd ~/dotfiles
 ./sync
 ```
 
+Updating / Publishing Dotfiles (added to $PATH):
+
+* `edit-dotfiles`
+* `publish-dotfiles`
+* `pull-dotfiles`
+
+
+
 ## Prerequisites
 Install the following:
 
@@ -28,8 +36,7 @@ brew install zsh
 curl -L http://install.ohmyz.sh | sh
 ```
 
-## Other Useful Things
+## Useful Downloads
 
 1. Install [Solarized](http://ethanschoonover.com/solarized)
 2. Fix for Solarized and iTerm2: http://michaelheap.com/solarized-with-iterm2/
-
