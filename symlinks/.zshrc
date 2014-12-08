@@ -6,8 +6,5 @@ for file in ~/dotfiles/zshrc.d/*.zsh; do
   source $file
 done
 
-
-
-
 source $ZSH/oh-my-zsh.sh
 
