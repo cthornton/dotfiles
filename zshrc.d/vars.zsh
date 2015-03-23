@@ -1,1 +1,1 @@
-export DORK="megan"
+export HOSTNAME=`hostname`
