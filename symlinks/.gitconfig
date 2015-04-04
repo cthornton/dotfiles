@@ -20,6 +20,7 @@
 
   st = status
   fp = push --force
+  fuck-it = push --force
   ci = commit
   co = checkout
   purge = reset HEAD --hard
@@ -28,3 +29,11 @@
   cp = cherry-pick
   squash = "!f(){ git reset --soft HEAD~${1} && git commit --edit -m\"$(git log --format=%B --reverse HEAD..HEAD@{1})\"; };f"
 
+  # git last <n>
+  last = log -n
+
+  # list branches not merged into currently checked out branch
+  wip = branch --no-merged
+
+  # list branches merged into currently checked out branch
+  done = branch --merged
