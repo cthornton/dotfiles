@@ -28,6 +28,7 @@
   rb = rebase
   cp = cherry-pick
   squash = "!f(){ git reset --soft HEAD~${1} && git commit --edit -m\"$(git log --format=%B --reverse HEAD..HEAD@{1})\"; };f"
+  br = branch
 
   # git last <n>
   last = log -n
