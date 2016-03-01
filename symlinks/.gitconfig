@@ -1,6 +1,7 @@
+[include]
+  path = ~/dotfiles/git/current-user.gitconfig
 [user]
   name = Christopher Thornton
-  email = rmdirbin@gmail.com
 [rerere]
   enabled = 1
 [color]
@@ -18,6 +19,9 @@
 
   cleanup = "!git branch --merged | grep  -v '\\*\\|master\\|develop\\|master_newui' | xargs -n 1 git branch -d"
 
+  recommit = commit --amend -CHEAD
+  reci = commit --amend -CHEAD
+
   st = status
   fp = push --force
   fuck-it = push --force
@@ -29,6 +33,7 @@
   cp = cherry-pick
   squash = "!f(){ git reset --soft HEAD~${1} && git commit --edit -m\"$(git log --format=%B --reverse HEAD..HEAD@{1})\"; };f"
   br = branch
+  reauthor = commit --amend --reset-author -C HEAD
 
   # git last <n>
   last = log -n
@@ -38,3 +43,5 @@
 
   # list branches merged into currently checked out branch
   done = branch --merged
+[core]
+	excludesfile = ~/dotfiles/git/.globalgitignore

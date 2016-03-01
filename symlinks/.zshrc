@@ -7,4 +7,3 @@ for file in ~/dotfiles/zshrc.d/*.zsh; do
 done
 
 source $ZSH/oh-my-zsh.sh
-
