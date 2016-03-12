@@ -44,4 +44,5 @@
   # list branches merged into currently checked out branch
   done = branch --merged
 [core]
-	excludesfile = ~/dotfiles/git/.globalgitignore
+  excludesfile = ~/dotfiles/git/.globalgitignore
+  editor=vim
