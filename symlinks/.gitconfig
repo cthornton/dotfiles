@@ -46,6 +46,7 @@
   done = branch --merged
 [core]
 	excludesfile = ~/dotfiles/git/.globalgitignore
+  editor=vim
 [oh-my-zsh]
 	hide-dirty = 1
 [diff]
