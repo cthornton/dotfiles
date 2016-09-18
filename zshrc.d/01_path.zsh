@@ -1,10 +1,14 @@
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:$PATH"
 
-# Note support for both Postgres.app 9.3 and 9.4
-export PATH="/Applications/Postgres.app/Contents/Versions/9.3/bin:$PATH"
-export PATH="/Applications/Postgres.app/Contents/Versions/9.4/bin:$PATH"
-export PATH=/Applications/Sublime\ Text.app/Contents/SharedSupport/bin:$PATH
-export PATH=~/bin-dotfiles:$PATH
-export PATH=$PATH:/usr/local/opt/go/libexec/bin
+add_to_path_if_exists() {
+  # Ensure they passed an argument
+  if [ "$1" ] && [[ -s "$1" ]] then
+    echo "Added to path: $1"
+    export PATH="$1:$PATH"
+  fi
+}
 
-export PATH="$PATH:$HOME/.rvm/bin"
+add_to_path_if_exists "/Applications/Postgres.app/Contents/Versions/latest/bin"
+add_to_path_if_exists "$HOME/bin-dotfiles"
+add_to_path_if_exists "/usr/local/opt/go/libexec/bin"
+add_to_path_if_exists "$HOME/.rvm/bin"
