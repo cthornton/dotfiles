@@ -3,7 +3,6 @@ export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:$PATH"
 add_to_path_if_exists() {
   # Ensure they passed an argument
   if [ "$1" ] && [[ -s "$1" ]] then
-    echo "Added to path: $1"
     export PATH="$1:$PATH"
   fi
 }
