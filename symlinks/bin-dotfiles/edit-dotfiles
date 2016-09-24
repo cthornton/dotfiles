@@ -1,4 +1,2 @@
 #!/bin/bash
-
-cd ~/dotfiles
-edit .
+atom ~/dotfiles

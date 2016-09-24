@@ -19,19 +19,20 @@
 
   cleanup = "!git branch --merged | grep  -v '\\*\\|master\\|develop\\|master_newui' | xargs -n 1 git branch -d"
 
-  recommit = commit --amend -CHEAD
-  reci = commit --amend -CHEAD
+  recommit = "!git ci --amend -CHEAD"
+  reci = "!git recommit"
+  p = "!git pull origin $(git current-branch)"
 
   st = status
   fp = push --force
   fuck-it = push --force
-  ci = commit
+  ci = commit --no-verify
   co = checkout
   purge = reset HEAD --hard
   pp = pull --prune
   rb = rebase
   cp = cherry-pick
-  squash = "!f(){ git reset --soft HEAD~${1} && git commit --edit -m\"$(git log --format=%B --reverse HEAD..HEAD@{1})\"; };f"
+  squash = "!f(){ git reset --soft HEAD~${1} && git ci --edit -m\"$(git log --format=%B --reverse HEAD..HEAD@{1})\"; };f"
   br = branch
   reauthor = commit --amend --reset-author -C HEAD
 
@@ -45,3 +46,8 @@
   done = branch --merged
 [core]
 	excludesfile = ~/dotfiles/git/.globalgitignore
+  editor=vim
+[oh-my-zsh]
+	hide-dirty = 1
+[diff]
+	compactionHeuristic = true
