@@ -49,5 +49,3 @@
   editor=vim
 [oh-my-zsh]
 	hide-dirty = 1
-[diff]
-	compactionHeuristic = true

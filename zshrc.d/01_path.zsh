@@ -1,4 +1,5 @@
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:$PATH"
+export PATH="$PATH:./node_modules/.bin"
 
 add_to_path_if_exists() {
   # Ensure they passed an argument
@@ -7,8 +8,9 @@ add_to_path_if_exists() {
   fi
 }
 
+add_to_path_if_exists "/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 add_to_path_if_exists "/Applications/Postgres.app/Contents/Versions/latest/bin"
 add_to_path_if_exists "$HOME/bin-dotfiles"
 add_to_path_if_exists "/usr/local/opt/go/libexec/bin"
 add_to_path_if_exists "$HOME/.rvm/bin"
-add_to_path_if_exists "$HOME/android-sdk/platform-tools"
+add_to_path_if_exists "$HOME/Library/Android/sdk/platform-tools"
