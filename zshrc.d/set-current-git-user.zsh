@@ -3,7 +3,7 @@ echo "[user]" > $current_user_path
 
 hostname=`hostname`
 case "$hostname" in
-  "trogdor.local")
+  "dell-laptop.local")
     echo "  email=\"cthornton@squareup.com\"" >> $current_user_path
     echo "  signingkey = AD19B836" >> $current_user_path
     ;;
