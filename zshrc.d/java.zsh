@@ -8,4 +8,4 @@ if [[ -s "/usr/lib/jvm/java-8-openjdk-amd64" ]] then
   export JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64"
 fi
 
-export ANDROID_HOME=ANDROID_HOME=$HOME/Library/Android/sdk
+export ANDROID_HOME=$HOME/Library/Android/sdk
