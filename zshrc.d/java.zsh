@@ -9,3 +9,4 @@ if [[ -s "/usr/lib/jvm/java-8-openjdk-amd64" ]] then
 fi
 
 export ANDROID_HOME=$HOME/Library/Android/sdk
+export GRADLE_USER_HOME=$HOME/.gradle

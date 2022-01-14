@@ -10,6 +10,8 @@ case "$hostname" in
 	  echo "  insteadOf = git://github.com/" >> $current_user_path
     echo "[commit]" >> $current_user_path
     echo "  gpgsign = true" >> $current_user_path
+    echo "[gpg]" >> $current_user_path
+    echo "  program=gpg" >> $current_user_path
     ;;
   *)
     echo "[user]" > $current_user_path
