@@ -1,6 +1,3 @@
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:$PATH"
-export PATH="$PATH:./node_modules/.bin"
-
 add_to_path_if_exists() {
   # Ensure they passed an argument
   if [ "$1" ] && [[ -s "$1" ]] then
