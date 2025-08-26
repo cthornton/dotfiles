@@ -5,6 +5,7 @@ add_to_path_if_exists() {
   fi
 }
 
+add_to_path_if_exists "$HOME/.pyenv/shims"
 add_to_path_if_exists "/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 add_to_path_if_exists "/Applications/Postgres.app/Contents/Versions/latest/bin"
 add_to_path_if_exists "$HOME/bin-dotfiles"

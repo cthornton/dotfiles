@@ -7,3 +7,7 @@ for file in ~/dotfiles/zshrc.d/*.zsh; do
 done
 
 source $ZSH/oh-my-zsh.sh
+
+if [[ -n "$SSH_TTY" ]]; then
+  PROMPT="📞 $PROMPT"
+fi
